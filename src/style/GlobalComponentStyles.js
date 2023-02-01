@@ -27,8 +27,8 @@ export const Container = styled.section`
     border: 1px solid black;
     margin: ${(props) => props.margin || 0};
 
-    @media (min-width: 768px) {
-        min-width: 43.125rem;
+    @media (min-width: 900px) {
+        min-width: 60.294rem;
         margin: 0 auto;
     }
 
