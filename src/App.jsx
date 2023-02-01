@@ -9,6 +9,11 @@ import Footer from "./components/Footer.jsx";
 const GlobalContainer = styled.main`
     display: flex;
     flex-direction: column;
+    margin: 0 1rem;
+
+    @media (min-width: 768px) {
+        margin: 0;
+    }
 `;
 
 function App() {

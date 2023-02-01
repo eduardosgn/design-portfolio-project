@@ -12,7 +12,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './style.css';
 
-const {light_cream} = pallete.colors.neutral;
+const { light_cream, black } = pallete.colors.neutral;
 
 function MyWork() {
     const sliderRef = useRef();
@@ -30,67 +30,91 @@ function MyWork() {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 900,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                }
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                }
-            }
-        ]
+                },
+            },
+        ],
     };
 
     function goToNext() {
         sliderRef.current.slickNext();
-    };
+    }
 
     function goToPrev() {
         sliderRef.current.slickPrev();
-    };
+    }
 
     return (
         <>
-            <div className='card-title'>
-                <AccentTitle>My Work</AccentTitle>
+            <div className="card-title">
+                <AccentTitle textColor={black}>My Work</AccentTitle>
             </div>
 
             <Slider {...settings} ref={sliderRef}>
-                <div className='card-container'>
+                <div className="card-container">
                     <img src={image1} alt="" />
                 </div>
 
-                <div className='card-container'>
+                <div className="card-container">
                     <img src={image2} alt="" />
                 </div>
 
-                <div className='card-container'>
+                <div className="card-container">
                     <img src={image3} alt="" />
                 </div>
 
-                <div className='card-container'>
+                <div className="card-container">
                     <img src={image4} alt="" />
                 </div>
 
-                <div className='card-container'>
+                <div className="card-container">
                     <img src={image5} alt="" />
                 </div>
             </Slider>
 
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <button onClick={() => goToPrev()} className='btn-prev' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '5px'}}>
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                }}
+            >
+                <button
+                    onClick={() => goToPrev()}
+                    className="btn-prev"
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "5px",
+                    }}
+                >
                     <HiArrowSmLeft size={25} color={light_cream} />
                 </button>
-                <button onClick={() => goToNext()} className='btn-next' style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: '5px'}}>
+                <button
+                    onClick={() => goToNext()}
+                    className="btn-next"
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginLeft: "5px",
+                    }}
+                >
                     <HiArrowSmRight size={25} color={light_cream} />
                 </button>
             </div>
