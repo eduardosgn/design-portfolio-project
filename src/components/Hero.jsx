@@ -61,11 +61,21 @@ const Card = styled.div`
 function Hero() {
     return (
         <Container>
-            <Title textAlign="center" padding="0 2rem" margin="2rem 0 0 0">
+            <Title
+                textAlignMobile="center"
+                textAlignDesktop="center"
+                padding="0 2rem"
+                margin="2rem 0 0 0"
+            >
                 Design solutions made easy
             </Title>
 
-            <BodyText textAlign="center" margin="1.5rem 0" padding="0 1.5rem">
+            <BodyText
+                margin="1.5rem 0 4rem 0"
+                padding="0 1.5rem"
+                textAlignDesktop="center"
+                textAlignMobile="center"
+            >
                 With over ten years of experience in various design disciplines,
                 I'm your one-stop shop for your design needs.
             </BodyText>

@@ -26,14 +26,15 @@ export const Container = styled.section`
     min-width: 21.438rem;
     border: 1px solid black;
     margin: ${(props) => props.margin || 0};
+    padding: ${(props) => props.padding || 0};
 
     @media (min-width: 900px) {
-        min-width: 60.294rem;
+        width: 60.294rem;
         margin: 0 auto;
     }
 
     @media (min-width: 1440px) {
-        min-width: 69.375rem;
+        width: 69.375rem;
     }
 `;
 
@@ -42,8 +43,12 @@ export const Title = styled.h1`
     color: ${(props) => props.textColor || black};
     font-size: ${h1.mobile};
     margin: ${(props) => props.margin || 0};
-    text-align: ${(props) => props.textAlign || "left"};
+    text-align: ${(props) => props.textAlignMobile || "left"};
     padding: ${(props) => props.padding || 0};
+
+    @media (min-width: 900px) {
+        text-align: ${(props) => props.textAlignDesktop || "left"};
+    }
 
     @media (min-width: 1440px) {
         font-size: ${h1.desktop};
@@ -54,7 +59,11 @@ export const Subtitle = styled.h2`
     color: ${(props) => props.textColor || black};
     font-size: ${h2.mobile};
     margin: ${(props) => props.margin || 0};
-    text-align: ${(props) => props.textAlign || "left"};
+    text-align: ${(props) => props.textAlignMobile || "left"};
+
+    @media (min-width: 900px) {
+        text-align: ${(props) => props.textAlignDesktop || "left"};
+    }
 
     @media (min-width: 1440px) {
         font-size: ${h2.desktop};
@@ -73,39 +82,43 @@ export const BodyText = styled.p`
     font-size: ${body};
     margin: ${(props) => props.margin || 0};
     padding: ${(props) => props.padding || 0};
-    text-align: ${(props) => props.textAlign || "left"};
+    text-align: ${(props) => props.textAlignMobile || "left"};
     line-height: 1.5;
+
+    @media (min-width: 900px) {
+        text-align: ${(props) => props.textAlignDesktop || "left"};
+    }
 `;
 
 //GLOBAL BUTTON STYLES
 export const PrimaryButton = styled.button`
     font-size: 1rem;
-    color: ${ light_cream };
+    color: ${light_cream};
     font-weight: bold;
-    background: ${ black };
+    background: ${black};
     border-radius: 50px;
     border: none;
-    padding: .9rem 2rem;
+    padding: 0.9rem 2rem;
     cursor: pointer;
     transition: all 0.05s ease-in-out;
 
     &:hover {
-        background: ${ galatic_blue }; 
+        background: ${galatic_blue};
     }
 `;
 
 export const SecondaryButton = styled.button`
     font-size: 1rem;
-    color: ${ light_cream };
+    color: ${light_cream};
     font-weight: bold;
-    background: ${ light_red };
+    background: ${light_red};
     border-radius: 50px;
     border: none;
-    padding: .9rem 2rem;
+    padding: 0.9rem 2rem;
     cursor: pointer;
     transition: all 0.05s ease-in-out;
 
     &:hover {
-        background: ${ summer_yellow }; 
+        background: ${summer_yellow};
     }
 `;
