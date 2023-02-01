@@ -1,0 +1,44 @@
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    width: 33.75rem;
+    height: 22.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.card-container img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.btn-prev, .btn-next {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    background: #030303;
+    transition: all 0.05s ease-in-out;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    background: #755CDE;
+}
+
+.slick-slide > div {
+    margin: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
