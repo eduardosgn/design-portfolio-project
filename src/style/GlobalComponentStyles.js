@@ -24,7 +24,6 @@ const { h1, h2, h3, body } = fontSizes;
 export const Container = styled.section`
     margin: 0 1rem;
     min-width: 21.438rem;
-    border: 1px solid black;
     margin: ${(props) => props.margin || 0};
     padding: ${(props) => props.padding || 0};
 
@@ -117,6 +116,7 @@ export const SecondaryButton = styled.button`
     padding: 0.9rem 2rem;
     cursor: pointer;
     transition: all 0.05s ease-in-out;
+    width: ${(props) => props.width || ""};
 
     &:hover {
         background: ${summer_yellow};
