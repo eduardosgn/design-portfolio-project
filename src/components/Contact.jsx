@@ -34,6 +34,7 @@ function Contact() {
                     >
                         Book a call with me
                     </Subtitle>
+
                     <BodyText
                         textColor="white"
                         textAlignMobile="center"
@@ -45,6 +46,7 @@ function Contact() {
                         there.
                     </BodyText>
                 </div>
+
                 <SecondaryButton width="70%">Free consultation</SecondaryButton>
             </ContactSection>
         </Container>
